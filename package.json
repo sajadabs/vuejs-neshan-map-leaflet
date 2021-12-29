@@ -1,0 +1,35 @@
+{
+  "name": "vuejs-neshan-map-leaflet",
+  "version": "1.0.2",
+  "description": "vuejs neshan map leaflet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajadabs/vuejs-neshan-map-leaflet.git"
+  },
+  "keywords": [
+    "neshan",
+    "map",
+    "vuejs",
+    "vue",
+    "leaflet"
+  ],
+  "author": "Sajad Abasi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sajadabs/vuejs-neshan-map-leaflet/issues"
+  },
+  "homepage": "https://github.com/sajadabs/vuejs-neshan-map-leaflet#readme",
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.26",
+    "bili": "^5.0.5",
+    "rollup-plugin-vue": "^6.0.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}
