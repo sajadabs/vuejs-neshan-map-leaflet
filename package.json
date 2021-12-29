@@ -1,10 +1,20 @@
 {
   "name": "vuejs-neshan-map-leaflet",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "vuejs neshan map leaflet",
-  "main": "index.js",
+  "main": "./dist/vuejs-neshan-map-leaflet.umd.js",
+  "module": "./dist/vuejs-neshan-map-leaflet.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/vuejs-neshan-map-leaflet.mjs",
+      "require": "./dist/vuejs-neshan-map-leaflet.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -24,12 +34,10 @@
   },
   "homepage": "https://github.com/sajadabs/vuejs-neshan-map-leaflet#readme",
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.2.26",
-    "bili": "^5.0.5",
-    "rollup-plugin-vue": "^6.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "@vitejs/plugin-vue": "^4.1.0",
+    "vite": "^4.2.1"
   },
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^3.2.47"
   }
 }
