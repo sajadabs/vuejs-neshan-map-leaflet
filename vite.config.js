@@ -18,6 +18,10 @@ export default defineConfig({
             // into your library
             external: ['vue'],
             output: {
+                exports: 'named',
+                dir: 'dist',
+                format: 'umd',
+                name: 'NeshanMapLeaflet',
                 // Provide global variables to use in the UMD build
                 // for externalized deps
                 globals: {
