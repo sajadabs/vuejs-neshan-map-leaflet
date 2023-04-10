@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import NeshanMapLeaflet from "@/components/NeshanMapLeaflet.vue";
+import NeshanMapLeaflet from "./components/NeshanMapLeaflet.vue";
 
 export default defineComponent({
     name: 'NeshanMapLeaflet',

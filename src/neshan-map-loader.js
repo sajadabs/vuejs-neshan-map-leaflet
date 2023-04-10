@@ -1,7 +1,7 @@
 const BASE_URL = "https://static.neshan.org";
 const DEFAULT_URL = `${BASE_URL}/sdk/leaflet/1.4.0/leaflet.js`;
 
-export default (props) => {
+export default function NeshanMapLoader(props) {
   const createScript = () => {
     const { onError, onLoad } = props;
     const script = document.createElement("script");
@@ -23,3 +23,4 @@ export default (props) => {
 
   return createScript();
 };
+
