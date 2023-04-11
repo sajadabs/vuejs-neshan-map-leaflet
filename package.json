@@ -1,43 +1,43 @@
 {
-  "name": "vuejs-neshan-map-leaflet",
-  "version": "1.1.4",
-  "description": "vuejs neshan map leaflet",
-  "main": "./dist/vuejs-neshan-map-leaflet.umd.js",
-  "module": "./dist/vuejs-neshan-map-leaflet.mjs",
-  "exports": {
-    ".": {
-      "import": "./dist/vuejs-neshan-map-leaflet.mjs",
-      "require": "./dist/vuejs-neshan-map-leaflet.umd.js"
+    "name": "vuejs-neshan-map-leaflet",
+    "version": "1.1.4",
+    "description": "vuejs neshan map leaflet",
+    "main": "./dist/vuejs-neshan-map-leaflet.umd.js",
+    "module": "./dist/vuejs-neshan-map-leaflet.mjs",
+    "exports": {
+        ".": {
+            "import": "./dist/vuejs-neshan-map-leaflet.mjs",
+            "require": "./dist/vuejs-neshan-map-leaflet.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
     },
-    "./dist/style.css": "./dist/style.css"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sajadabs/vuejs-neshan-map-leaflet.git"
-  },
-  "keywords": [
-    "neshan",
-    "map",
-    "vuejs",
-    "vue",
-    "leaflet"
-  ],
-  "author": "Sajad Abasi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sajadabs/vuejs-neshan-map-leaflet/issues"
-  },
-  "homepage": "https://github.com/sajadabs/vuejs-neshan-map-leaflet#readme",
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.1.0",
-    "vite": "^4.2.1"
-  },
-  "dependencies": {
-    "vue": "^3.2.47"
-  }
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build && copy README.md dist",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sajadabs/vuejs-neshan-map-leaflet.git"
+    },
+    "keywords": [
+        "neshan",
+        "map",
+        "vuejs",
+        "vue",
+        "leaflet"
+    ],
+    "author": "Sajad Abasi",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sajadabs/vuejs-neshan-map-leaflet/issues"
+    },
+    "homepage": "https://github.com/sajadabs/vuejs-neshan-map-leaflet#readme",
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.1.0",
+        "vite": "^4.2.1"
+    },
+    "dependencies": {
+        "vue": "^3.2.47"
+    }
 }

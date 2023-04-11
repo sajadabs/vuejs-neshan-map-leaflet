@@ -1,13 +1,24 @@
-# ⚛️ Vuejs component for 🍃 Neshan Leaflet map.
-
+# Vuejs component for  Neshan Leaflet map.
 
 ## Getting started
 
-In the simple case you just need to add `options` prop to `NeshanMap` component and import [`NeshanLeaflet`](https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.css) stylesheet.
+### Installation
 
+```
+npm i vuejs-neshan-map-leaflet
+```
+
+### Usage
+
+In the simple case you just need to add `options` prop to `NeshanMapLeaflet `
+component and
+import [`NeshanMapLeaflet`](https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.css)
+stylesheet.
+
+### Global Registration
 
 ```javascript
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
 import NeshanMapLeaflet from 'vuejs-neshan-map-leaflet'
@@ -19,56 +30,41 @@ app.use(NeshanMapLeaflet)
 app.mount('#app')
 ```
 
-### Installation
-
-npm:
-```
-npm i vuejs-neshan-map-leaflet
-```
-
-### Global Registration
-
-```javascript
-import Vue from 'vue'
-import NeshanMap from 'vuejs-neshan-map-leaflet'
-
-Vue.use(NeshanMap)
-```
-
 ### Local Registration
 
-```vuejs
-import NeshanMap from 'vuejs-neshan-map-leaflet'
+```javascript
+import NeshanMapLeaflet from 'vuejs-neshan-map-leaflet'
 
-  export default {
+export default {
     components: {
-      NeshanMap,
+        NeshanMap
     }
-  }
+}
 ```
 
 ### Usage
 
 ```vue
+
 <template>
-  <neshan-map :options="options"/> 
+    <NeshanMapLeaflet :options="options"/>
 </template>
 
 <script>
-    export default {
-        data(){
-            return {
-                options:{
-                     key: 'YOUR_API_KEY',
-                     maptype: 'dreamy',
-                     poi: true,
-                     traffic: false,
-                     center: [35.699739, 51.338097],
-                     zoom: 13
-                }
+export default {
+    data() {
+        return {
+            options: {
+                key: 'YOUR_API_KEY',
+                maptype: 'dreamy',
+                poi: true,
+                traffic: false,
+                center: [36.30284183765441, 59.5958496945331],
+                zoom: 13
             }
-        },
-    }
+        }
+    },
+}
 </script>
 ```
 
@@ -76,4 +72,5 @@ import NeshanMap from 'vuejs-neshan-map-leaflet'
 
 ### Neshan Maps API Loads on Demand
 
-There is no need to place a `<script src=` tag at top of page. The Neshan Maps API loads upon the first usage of the `NeshanMapReactLeaflet` component.
+There is no need to place a `<script src=` tag at top of page. The Neshan Maps
+API loads upon the first usage of the `NeshanMapLeaflet` component.
