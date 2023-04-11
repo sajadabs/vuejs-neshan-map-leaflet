@@ -21,7 +21,7 @@ stylesheet.
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import NeshanMapLeaflet from 'vuejs-neshan-map-leaflet'
+import { NeshanMapLeaflet } from 'vuejs-neshan-map-leaflet'
 
 const app = createApp(App)
 
@@ -33,11 +33,11 @@ app.mount('#app')
 ### Local Registration
 
 ```javascript
-import NeshanMapLeaflet from 'vuejs-neshan-map-leaflet'
+import { NeshanMapLeaflet } from 'vuejs-neshan-map-leaflet'
 
 export default {
     components: {
-        NeshanMap
+        NeshanMapLeaflet
     }
 }
 ```
@@ -47,23 +47,31 @@ export default {
 ```vue
 
 <template>
-    <NeshanMapLeaflet :options="options"/>
+  <NeshanMapLeaflet
+      :options="options"
+      @latitude="getLatitude"
+      @longitude="getLongitude"
+  />
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            options: {
-                key: 'YOUR_API_KEY',
-                maptype: 'dreamy',
-                poi: true,
-                traffic: false,
-                center: [36.30284183765441, 59.5958496945331],
-                zoom: 13
-            }
-        }
-    },
+<script setup>
+import { NeshanMapLeaflet } from 'vuejs-neshan-map-leaflet';
+
+const options = {
+  key: 'YOUR_API_KEY',
+  maptype: 'dreamy',
+  poi: true,
+  traffic: false,
+  center: [36.30284183765441, 59.5958496945331],
+  zoom: 13
+}
+
+function getLatitude(latitude) {
+  console.log(latitude)
+}
+
+function getLongitude(longitude) {
+  console.log(longitude)
 }
 </script>
 ```
